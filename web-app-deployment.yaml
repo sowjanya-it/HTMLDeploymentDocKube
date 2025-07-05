@@ -7,13 +7,13 @@ spec:
     selector:
         matchLabels:
             app: my-web-app # Label to match pods
-   template:
+    template:
        metadata:
             labels:
                 app: my-web-app # Label assigned to pods
-      spec:
+       spec:
             containers:
             - name: my-web-app-container
-            image: sowjanyajindam/my-web-app:latest
+            image: sowjanyajindam/webappimagekube:latest
             ports:
-              - containerPort: 80 # Port to expose
+            - containerPort: 80 # Port to expose
