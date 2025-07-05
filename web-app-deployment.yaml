@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: my-web-app-deployment
+spec:
+    replicas: 3 # Number of pods to create
+    selector:
+        matchLabels:
+            app: my-web-app # Label to match pods
+   template:
+       metadata:
+            labels:
+                app: my-web-app # Label assigned to pods
+      spec:
+            containers:
+            - name: my-web-app-container
+            image: sowjanyajindam/my-web-app:latest
+            ports:
+              - containerPort: 80 # Port to expose
